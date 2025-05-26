@@ -23,7 +23,7 @@ public class GestaoEscolarController {
     private ProfessorRepository repository;
 
     @PostMapping
-    @Transactional // Garante que o métodod execute dentro de uma transação
+    @Transactional // Garante que o métodod execute dentro de uma transaçã
     public void cadastrarProfessores(@RequestBody @Valid DadosCadastroProfessores cadastroProfessores){
         var professor = new Professor(cadastroProfessores);
         repository.save(professor);
